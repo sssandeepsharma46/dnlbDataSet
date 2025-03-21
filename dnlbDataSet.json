@@ -1,0 +1,6 @@
+{
+    "extends": "./node_modules/pcf-scripts/dnlbDataSet_base.json",
+    "compilerOptions": {
+        "typeRoots": ["node_modules/@types"]
+    }
+}

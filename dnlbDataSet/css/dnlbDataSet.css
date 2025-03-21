@@ -1,0 +1,206 @@
+/* Container styles */
+.container {
+    max-width: 100%;
+    padding: 16px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Input - Slightly shifted to the right */
+.search-input {
+    width: 250px; /* Fixed width for a clean look */
+    padding: 10px;
+    margin: 10px 0 10px auto; /* Moves input to the right */
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Search Input - Focus effect */
+.search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Table Header */
+table th {
+    padding: 12px;
+    text-align: left;
+    background: linear-gradient(135deg, #0099ff, #0077ff);
+    color: white;
+    font-weight: bold;
+}
+
+/* Table Rows */
+table tr {
+    background-color: #fff;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Table Cells */
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternate Row Coloring */
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-input {
+        width: 100%;
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+    }
+}
+
+/* Sortable header styling */
+th.sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+/* Sorting indicator */
+th.sortable::after {
+    content: " ▲▼"; /* Adds up/down arrow for sorting */
+    font-size: 12px;
+    color: gray;
+    margin-left: 8px;
+}
+
+th.sortable.active[data-order="asc"]::after {
+    content: " ▲";
+    color: black;
+}
+
+th.sortable.active[data-order="desc"]::after {
+    content: " ▼";
+    color: black;
+}
+
+.row-count {
+    position: absolute;   /* Fix it in place */
+    bottom: 10px;         /* Distance from the bottom */
+    left: 20px;           /* Distance from the left */
+    background: #f8f8f8;  /* Light background */
+    padding: 5px 10px;    /* Padding around text */
+    border-radius: 5px;   /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Pagination Buttons */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.pagination-button {
+    background-color: #007aff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover {
+    background-color: #0059b3;
+}
+
+/* Page Size Dropdown */
+.select-dropdown {
+    width: 150px;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: white;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus & Hover Effects */
+.select-dropdown:hover, 
+.select-dropdown:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.6);
+}
+
+/* Styling Dropdown Options */
+.select-dropdown option {
+    background: #e3f2fd; /* Light blue background */
+    color: #0056b3;
+    font-size: 16px;
+    padding: 8px;
+}
+
+/* Hover Effect for Options (Only works in some browsers) */
+.select-dropdown option:checked {
+    background: #cce5ff; 
+    color: white;
+}
+
+/* Ensure dropdown arrow is visible */
+.select-dropdown::-ms-expand {
+    display: none;
+}
+
+/* Sortable header styling */
+th.sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+/* Sorting indicator */
+th.sortable::after {
+    content: " ▲▼"; /* Adds up/down arrow for sorting */
+    font-size: 12px;
+    color: gray;
+    margin-left: 8px;
+}
+
+th.sortable.active[data-order="asc"]::after {
+    content: " ▲";
+    color: black;
+}
+
+th.sortable.active[data-order="desc"]::after {
+    content: " ▼";
+    color: black;
+}
